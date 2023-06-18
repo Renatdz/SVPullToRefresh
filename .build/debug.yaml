@@ -1,0 +1,42 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SVPullToRefresh-debug.module": ["<SVPullToRefresh-debug.module>"]
+  "main": ["<SVPullToRefresh-debug.module>"]
+  "test": ["<SVPullToRefresh-debug.module>"]
+default: "main"
+nodes:
+  "/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVInfiniteScrolling.m.o":
+    tool: clang
+    inputs: ["/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/UIScrollView+SVInfiniteScrolling.m"]
+    outputs: ["/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVInfiniteScrolling.m.o"]
+    description: "Compiling SVPullToRefresh UIScrollView+SVInfiniteScrolling.m"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-g","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=SVPullToRefresh","-I","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/include","-fmodules-cache-path=/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/ModuleCache","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-fPIC","-MD","-MT","dependencies","-MF","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVInfiniteScrolling.m.d","-c","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/UIScrollView+SVInfiniteScrolling.m","-o","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVInfiniteScrolling.m.o"]
+    deps: "/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVInfiniteScrolling.m.d"
+
+  "/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVPullToRefresh.m.o":
+    tool: clang
+    inputs: ["/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/UIScrollView+SVPullToRefresh.m"]
+    outputs: ["/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVPullToRefresh.m.o"]
+    description: "Compiling SVPullToRefresh UIScrollView+SVPullToRefresh.m"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-g","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=SVPullToRefresh","-I","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/include","-fmodules-cache-path=/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/ModuleCache","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-fPIC","-MD","-MT","dependencies","-MF","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVPullToRefresh.m.d","-c","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/UIScrollView+SVPullToRefresh.m","-o","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVPullToRefresh.m.o"]
+    deps: "/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVPullToRefresh.m.d"
+
+  "<SVPullToRefresh-debug.module>":
+    tool: phony
+    inputs: ["/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVInfiniteScrolling.m.o","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/.build/arm64-apple-macosx/debug/SVPullToRefresh.build/UIScrollView+SVPullToRefresh.m.o"]
+    outputs: ["<SVPullToRefresh-debug.module>"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Sources/SVPullToRefresh/","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Package.swift","/Users/renatomendes/Developer/Frameworks/SVPullToRefresh/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
